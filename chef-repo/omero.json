@@ -1,0 +1,8 @@
+{
+  "postgresql": {
+    "password": {
+      "postgres": "omeropgpass"
+    }
+  },
+  "run_list": [ "recipe[omero::web]"]
+}
