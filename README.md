@@ -1,9 +1,14 @@
 Installing Nectar-OMERO on AWS, Centos 6
 =========================================
 
+The repository above is a full chef-solo cookbook repository for installing OMERO on Centos 6. The instructions for how I built this on a clean AWS Centos 6 image are below. You could either follow those instructions in order to recreate the whole thing, or you could clone this repo, navigate into the chef-repo folder and simply run chef-solo on the solo.rb and omero.json files therein, like so:
+
 ```
-ssh -i omero-nectar.pem root@52.68.177.139
+sudo chef-solo -c solo.rb -j omero.json
 ```
+I would have made the fully installed AWS image available, but seemingly because I used the official Centos 6 image from the AWS marketplace, I am not allowed to redistribute it. AWS is great, but sometimes the most basic things aren't allowed. Bollocks.
+
+
 
 1. install basic tools
 ======================
@@ -391,7 +396,7 @@ Other options you may notice are SELINUX=enforcing - if so, still change to =dis
 
 17. Log into OMERO web!
 =======================
-Hopefully you should be set up and OMERO ought to be findable at http://localhost:4080 (or the IP address of your server)
+Hopefully you should be set up and OMERO ought to be findable at http://localhost:4080 (or the IP address of your server:4080)
 
 
 
