@@ -8,7 +8,7 @@ sudo chef-solo -c solo.rb -j omero.json
 ```
 I would have made the fully installed AWS image available, but seemingly because I used the official Centos 6 image from the AWS marketplace, I am not allowed to redistribute it. AWS is great, but sometimes the most basic things aren't allowed. Bollocks.
 
-
+For those that want to know my process in building the repo available here, the instructions are below:
 
 1. install basic tools
 ======================
