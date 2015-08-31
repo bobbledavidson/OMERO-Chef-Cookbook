@@ -17,7 +17,7 @@ For those that want to know my process in building the repo available here, the 
 yum update -y
 yum install -y vim git wget
 yum groupinstall -y "Development tools"
-yum install Django
+# installing yum may require the EPEL repo. This may be installed by Chef below, so run "yum install -y Django" after
 
 ```
 
@@ -27,7 +27,7 @@ yum install Django
 ```
 #install to home directory
 cd ~
-curl -L https://www.opscode.com/chef/install.sh | bash
+curl -L https://www.opscode.com/chef/install.sh  | bash -s -- -v 12.4.1
 
 ```
 
